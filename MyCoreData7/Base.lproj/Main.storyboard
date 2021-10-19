@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Qg-AH-G9K">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Cryptos-->
+        <scene sceneID="Aau-6x-ufe">
+            <objects>
+                <tableViewController id="Ve5-Ha-alp" customClass="ContactTableViewController" customModule="MyCoreData7" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dO2-Js-8eX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="33K-eP-v76" detailTextLabel="S4w-EW-VIU" style="IBUITableViewCellStyleValue1" id="a4A-gp-4jz">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a4A-gp-4jz" id="jm9-vb-X4w">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="33K-eP-v76">
+                                            <rect key="frame" x="20" y="15" width="25" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S4w-EW-VIU">
+                                            <rect key="frame" x="361" y="15" width="33" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="UpdateContact" modalPresentationStyle="fullScreen" id="7Wl-N3-sjM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ve5-Ha-alp" id="0wb-lL-4zr"/>
+                            <outlet property="delegate" destination="Ve5-Ha-alp" id="0h7-b3-7C5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Cryptos" id="ESb-9z-1Cs">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="rfl-gg-ZIw">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="esQ-9O-SMO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zxg-oU-GUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="97.767857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyCoreData7" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plI-ZX-8oC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="My Crypto" id="hDt-ct-pRh">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="yVg-cj-bhm">
+                                            <connections>
+                                                <action selector="btnBack:" destination="BYZ-38-t0r" id="WmO-iE-e46"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1BH-re-3I3">
+                                <rect key="frame" x="111" y="88" width="193" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PXn-Ib-Jdy"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZIL-VK-fKC">
+                                <rect key="frame" x="111" y="130" width="193" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8eB-VD-Ox0"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ek9-6M-bxF">
+                                <rect key="frame" x="111" y="172" width="193" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uqO-Xg-1Ui"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lnj-xO-XGW">
+                                <rect key="frame" x="111" y="214" width="193" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gnD-rH-Zv6"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCI-g1-Nds">
+                                <rect key="frame" x="111" y="256" width="85" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="KYB-eZ-Fhb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save" titleAlignment="leading"/>
+                                <connections>
+                                    <action selector="btnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AfI-gI-bG4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaL-8f-8gi">
+                                <rect key="frame" x="219" y="256" width="85" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Edit" titleAlignment="trailing"/>
+                                <connections>
+                                    <action selector="btnEdit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYb-Fu-6Ww"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HaL-8f-8gi" firstAttribute="leading" secondItem="lCI-g1-Nds" secondAttribute="trailing" constant="23" id="00g-fY-68Z"/>
+                            <constraint firstItem="lCI-g1-Nds" firstAttribute="baseline" secondItem="HaL-8f-8gi" secondAttribute="baseline" id="1G1-w3-u51"/>
+                            <constraint firstItem="plI-ZX-8oC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bki-WU-RVl"/>
+                            <constraint firstItem="Lnj-xO-XGW" firstAttribute="top" secondItem="ek9-6M-bxF" secondAttribute="bottom" constant="8" id="CA0-33-Wot"/>
+                            <constraint firstItem="1BH-re-3I3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="EUA-BH-Axw"/>
+                            <constraint firstItem="1BH-re-3I3" firstAttribute="trailing" secondItem="ZIL-VK-fKC" secondAttribute="trailing" id="Eu1-No-1Sr"/>
+                            <constraint firstItem="ek9-6M-bxF" firstAttribute="top" secondItem="ZIL-VK-fKC" secondAttribute="bottom" constant="8" id="LN2-gu-eRl"/>
+                            <constraint firstItem="ek9-6M-bxF" firstAttribute="trailing" secondItem="Lnj-xO-XGW" secondAttribute="trailing" id="Lxy-5l-bbb"/>
+                            <constraint firstItem="1BH-re-3I3" firstAttribute="top" secondItem="plI-ZX-8oC" secondAttribute="bottom" id="MCA-uL-2FG"/>
+                            <constraint firstItem="Lnj-xO-XGW" firstAttribute="trailing" secondItem="HaL-8f-8gi" secondAttribute="trailing" id="OEa-Hd-A2i"/>
+                            <constraint firstItem="plI-ZX-8oC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UOq-Jj-ego"/>
+                            <constraint firstItem="plI-ZX-8oC" firstAttribute="centerX" secondItem="1BH-re-3I3" secondAttribute="centerX" id="dJh-eG-AGM"/>
+                            <constraint firstItem="ek9-6M-bxF" firstAttribute="leading" secondItem="Lnj-xO-XGW" secondAttribute="leading" id="enm-yq-COw"/>
+                            <constraint firstItem="1BH-re-3I3" firstAttribute="leading" secondItem="ZIL-VK-fKC" secondAttribute="leading" id="m4m-9r-pAw"/>
+                            <constraint firstItem="ZIL-VK-fKC" firstAttribute="top" secondItem="1BH-re-3I3" secondAttribute="bottom" constant="8" id="rFO-2w-vox"/>
+                            <constraint firstItem="plI-ZX-8oC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rSS-vB-LNQ"/>
+                            <constraint firstItem="Lnj-xO-XGW" firstAttribute="leading" secondItem="lCI-g1-Nds" secondAttribute="leading" id="tY9-T6-h4w"/>
+                            <constraint firstItem="ZIL-VK-fKC" firstAttribute="trailing" secondItem="ek9-6M-bxF" secondAttribute="trailing" id="urS-ki-jZl"/>
+                            <constraint firstItem="ZIL-VK-fKC" firstAttribute="leading" secondItem="ek9-6M-bxF" secondAttribute="leading" id="vqC-Eh-c8X"/>
+                            <constraint firstItem="lCI-g1-Nds" firstAttribute="top" secondItem="Lnj-xO-XGW" secondAttribute="bottom" constant="8" id="zS0-Ya-lqB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amount" destination="ZIL-VK-fKC" id="pyT-cC-0V2"/>
+                        <outlet property="btnEdit" destination="HaL-8f-8gi" id="w2D-co-CEA"/>
+                        <outlet property="date" destination="Lnj-xO-XGW" id="h4m-ew-X8I"/>
+                        <outlet property="name" destination="1BH-re-3I3" id="ACD-gR-elh"/>
+                        <outlet property="usd" destination="ek9-6M-bxF" id="Pm9-tf-Aza"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="97.767857142857139"/>
+        </scene>
+        <!--My Cryptos-->
+        <scene sceneID="R9Z-Ib-a47">
+            <objects>
+                <navigationController title="My Cryptos" automaticallyAdjustsScrollViewInsets="NO" id="6Qg-AH-G9K" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bqn-FD-yZA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ve5-Ha-alp" kind="relationship" relationship="rootViewController" id="edg-Dh-HpJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fxl-mh-6Zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-786.95652173913049" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7Wl-N3-sjM"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
